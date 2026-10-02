@@ -1,0 +1,1116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Mohammud Abdul Azeez Shafheeq, Cybersecurity Student and Developer">
+  <title>Mohammud Abdul Azeez Shafheeq | Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #07110c;
+      --bg-secondary: #0b1911;
+      --card: #102018;
+      --green: #35e879;
+      --green-dark: #19b957;
+      --text: #f0f8f2;
+      --muted: #a4b5a9;
+      --border: rgba(77, 230, 132, 0.18);
+      --shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background:
+        radial-gradient(ellipse at 10% 5%, rgba(26, 116, 62, 0.18), transparent 35%),
+        radial-gradient(ellipse at 90% 45%, rgba(30, 90, 54, 0.13), transparent 35%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    .section {
+      padding: 95px 0;
+      scroll-margin-top: 80px;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .section-heading span {
+      color: var(--green);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .section-heading h2 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(2rem, 5vw, 2.8rem);
+      margin-top: 8px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      max-width: 620px;
+      margin: 12px auto 0;
+    }
+
+    /* Navigation */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(7, 17, 12, 0.88);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    nav {
+      min-height: 74px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      font-family: "Space Grotesk", sans-serif;
+      color: var(--green);
+      font-weight: 700;
+      font-size: 1.15rem;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 27px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 0.9rem;
+      transition: color 0.25s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--green);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--green);
+      border-radius: 8px;
+      padding: 7px 11px;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 100vh;
+      padding: 130px 0 70px;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--green);
+      border: 1px solid var(--border);
+      background: rgba(31, 117, 61, 0.12);
+      padding: 8px 15px;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      margin-bottom: 24px;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--green);
+      border-radius: 50%;
+      box-shadow: 0 0 12px var(--green);
+    }
+
+    .hero h1 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(2.5rem, 7vw, 5.3rem);
+      line-height: 1.08;
+      letter-spacing: -2px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      display: block;
+      color: var(--green);
+    }
+
+    .hero h2 {
+      font-size: clamp(1.15rem, 3vw, 1.65rem);
+      color: #c8d7cd;
+      font-weight: 500;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      max-width: 680px;
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 12px 23px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      border: 1px solid var(--green);
+      transition: 0.25s;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--green);
+      color: #06130b;
+    }
+
+    .btn-primary:hover {
+      background: #74f5a3;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(53, 232, 121, 0.2);
+    }
+
+    .btn-outline {
+      color: var(--green);
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      background: rgba(53, 232, 121, 0.1);
+      transform: translateY(-3px);
+    }
+
+    .hero-decoration {
+      position: absolute;
+      right: 3%;
+      top: 29%;
+      width: 230px;
+      height: 230px;
+      border: 1px solid rgba(53, 232, 121, 0.14);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: rgba(53, 232, 121, 0.5);
+      font-size: 5rem;
+      pointer-events: none;
+    }
+
+    .hero-decoration::before,
+    .hero-decoration::after {
+      content: "";
+      position: absolute;
+      border: 1px solid rgba(53, 232, 121, 0.12);
+      border-radius: 50%;
+    }
+
+    .hero-decoration::before {
+      inset: 22px;
+    }
+
+    .hero-decoration::after {
+      inset: -22px;
+    }
+
+    /* About */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 35px;
+      align-items: stretch;
+    }
+
+    .about-text,
+    .about-card {
+      background: linear-gradient(145deg, rgba(18, 37, 26, 0.95), rgba(10, 24, 16, 0.95));
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .about-text p {
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .about-text strong {
+      color: var(--text);
+    }
+
+    .about-card h3 {
+      color: var(--green);
+      font-family: "Space Grotesk", sans-serif;
+      margin-bottom: 20px;
+    }
+
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.9rem;
+    }
+
+    .info-row:last-child {
+      border-bottom: none;
+    }
+
+    .info-row span:first-child {
+      color: var(--muted);
+    }
+
+    .info-row span:last-child {
+      text-align: right;
+      font-weight: 600;
+    }
+
+    /* Skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .skill-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 25px;
+      transition: 0.3s;
+    }
+
+    .skill-card:hover,
+    .project-card:hover,
+    .experience-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(53, 232, 121, 0.55);
+    }
+
+    .skill-icon {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: rgba(53, 232, 121, 0.1);
+      color: var(--green);
+      font-size: 1.35rem;
+      margin-bottom: 17px;
+    }
+
+    .skill-card h3 {
+      margin-bottom: 10px;
+      font-size: 1.08rem;
+    }
+
+    .skill-card p {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .tag {
+      background: rgba(53, 232, 121, 0.08);
+      border: 1px solid rgba(53, 232, 121, 0.16);
+      color: #a9efc0;
+      border-radius: 5px;
+      padding: 4px 9px;
+      font-size: 0.75rem;
+    }
+
+    /* Experience */
+    .experience-list {
+      max-width: 850px;
+      margin: auto;
+      display: grid;
+      gap: 20px;
+    }
+
+    .experience-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 25px 28px;
+      transition: 0.3s;
+    }
+
+    .experience-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+
+    .experience-card h3 {
+      color: var(--green);
+      font-size: 1.15rem;
+    }
+
+    .experience-date {
+      color: #a5eab9;
+      font-size: 0.85rem;
+    }
+
+    .experience-card p {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    /* Projects */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .project-card {
+      background: linear-gradient(145deg, #102018, #0a1710);
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      padding: 28px;
+      transition: 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-number {
+      color: var(--green);
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+    }
+
+    .project-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 12px;
+    }
+
+    .project-card p {
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-bottom: 15px;
+    }
+
+    .project-card .tags {
+      margin-top: auto;
+      padding-top: 5px;
+    }
+
+    /* Education */
+    .education-card {
+      max-width: 800px;
+      margin: auto;
+      padding: 30px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--green);
+      border-radius: 12px;
+    }
+
+    .education-card h3 {
+      color: var(--green);
+      font-size: 1.2rem;
+    }
+
+    .education-card p {
+      color: var(--muted);
+      margin-top: 7px;
+    }
+
+    /* Contact */
+    .contact-box {
+      max-width: 750px;
+      margin: auto;
+      padding: 35px;
+      text-align: center;
+      background: linear-gradient(145deg, #11271a, #0a1710);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+    }
+
+    .contact-box h3 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.7rem;
+      margin-bottom: 12px;
+    }
+
+    .contact-box p {
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .contact-link {
+      border: 1px solid var(--border);
+      padding: 10px 15px;
+      border-radius: 8px;
+      color: #c5e6cf;
+      font-size: 0.9rem;
+      transition: 0.25s;
+    }
+
+    .contact-link:hover {
+      border-color: var(--green);
+      color: var(--green);
+      background: rgba(53, 232, 121, 0.07);
+    }
+
+    footer {
+      padding: 25px 0;
+      text-align: center;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+    }
+
+    footer span {
+      color: var(--green);
+    }
+
+    /* Reveal animation */
+    .reveal {
+      opacity: 0;
+      transform: translateY(25px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero-decoration {
+        right: 4%;
+        width: 150px;
+        height: 150px;
+        font-size: 3.5rem;
+        opacity: 0.5;
+      }
+
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 700px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 74px;
+        left: 0;
+        width: 100%;
+        background: #0a1710;
+        padding: 20px 5%;
+        border-bottom: 1px solid var(--border);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .hero {
+        min-height: 90vh;
+      }
+
+      .hero-decoration {
+        display: none;
+      }
+
+      .about-grid,
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .section {
+        padding: 75px 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        letter-spacing: -1px;
+      }
+
+      .about-text,
+      .about-card,
+      .project-card,
+      .experience-card,
+      .contact-box {
+        padding: 22px;
+      }
+
+      .info-row {
+        flex-direction: column;
+        gap: 2px;
+      }
+
+      .info-row span:last-child {
+        text-align: left;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav class="container">
+      <a class="logo" href="#home">MAAS.</a>
+
+      <button class="menu-toggle" id="menuToggle"
+              aria-label="Toggle navigation"
+              aria-expanded="false">☰</button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Home -->
+    <section class="hero container" id="home">
+      <div class="hero-content">
+        <div class="eyebrow">
+          <span class="status-dot"></span>
+          Cybersecurity Student & Developer
+        </div>
+
+        <h1>
+          MOHAMMUD ABDUL
+          <span>AZEEZ SHAFHEEQ</span>
+        </h1>
+
+        <h2>Cybersecurity | Network Security | Python</h2>
+
+        <p>
+          I am a cybersecurity student passionate about network security,
+          ethical security practices, and building practical technology
+          projects. I enjoy learning how systems work and exploring ways
+          to make them more secure.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">Explore My Projects</a>
+          <a href="#contact" class="btn btn-outline">Contact Me</a>
+        </div>
+      </div>
+
+      <div class="hero-decoration" aria-hidden="true">⌘</div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span>Get to know me</span>
+          <h2>About Me</h2>
+          <p>A little about my background and interests.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              Hello! I am <strong>Mohammud Abdul Azeez Shafheeq</strong>,
+              a B.Tech Cyber Security student at Ramachandra College
+              of Engineering.
+            </p>
+
+            <p>
+              My interests include cybersecurity, network monitoring,
+              vulnerability analysis, and Python programming. I am
+              continuously developing my technical knowledge through
+              coursework, internships, and hands-on projects.
+            </p>
+
+            <p>
+              My career goal is to grow into a network security
+              professional and contribute to protecting digital
+              systems and infrastructure.
+            </p>
+          </div>
+
+          <div class="about-card reveal">
+            <h3>Personal Details</h3>
+
+            <div class="info-row">
+              <span>Name</span>
+              <span>Mohammud Abdul Azeez Shafheeq</span>
+            </div>
+
+            <div class="info-row">
+              <span>Degree</span>
+              <span>B.Tech</span>
+            </div>
+
+            <div class="info-row">
+              <span>Specialization</span>
+              <span>Cyber Security</span>
+            </div>
+
+            <div class="info-row">
+              <span>College</span>
+              <span>Ramachandra College of Engineering</span>
+            </div>
+
+            <div class="info-row">
+              <span>Interests</span>
+              <span>Network & Cybersecurity</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span>What I work with</span>
+          <h2>Technical Skills</h2>
+          <p>Tools and technologies I have studied and practiced.</p>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card reveal">
+            <div class="skill-icon">⌘</div>
+            <h3>Programming</h3>
+            <p>Programming languages used for learning and project development.</p>
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">C</span>
+              <span class="tag">Java</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon">⌁</div>
+            <h3>Cybersecurity</h3>
+            <p>Foundational security concepts and practical security tasks.</p>
+            <div class="tags">
+              <span class="tag">Vulnerability Analysis</span>
+              <span class="tag">Security Basics</span>
+              <span class="tag">Phishing Awareness</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon">◎</div>
+            <h3>Networking</h3>
+            <p>Network traffic inspection and network security fundamentals.</p>
+            <div class="tags">
+              <span class="tag">Wireshark</span>
+              <span class="tag">TCP/IP</span>
+              <span class="tag">Network Monitoring</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon">▤</div>
+            <h3>Web Development</h3>
+            <p>Basic web technologies for creating simple interfaces.</p>
+            <div class="tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">Flask</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon">▦</div>
+            <h3>Databases</h3>
+            <p>Database concepts and querying for application development.</p>
+            <div class="tags">
+              <span class="tag">SQL</span>
+              <span class="tag">PL/SQL</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon">⌕</div>
+            <h3>Tools & Platforms</h3>
+            <p>Tools used during technical learning and project work.</p>
+            <div class="tags">
+              <span class="tag">VS Code</span>
+              <span class="tag">Git</span>
+              <span class="tag">Linux</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span>Learning through practice</span>
+          <h2>Internship Experience</h2>
+          <p>Cybersecurity internship experience and practical learning.</p>
+        </div>
+
+        <div class="experience-list">
+          <article class="experience-card reveal">
+            <div class="experience-top">
+              <h3>Cybersecurity Intern — CodeAlpha</h3>
+              <span class="experience-date">June 2026</span>
+            </div>
+            <p>
+              Completed cybersecurity internship tasks, including
+              phishing-related work and practical exposure to security
+              concepts.
+            </p>
+          </article>
+
+          <article class="experience-card reveal">
+            <div class="experience-top">
+              <h3>Cybersecurity Intern — Codec Technologies</h3>
+              <span class="experience-date">June 2026</span>
+            </div>
+            <p>
+              Participated in a cybersecurity internship to strengthen
+              practical understanding of cybersecurity concepts and
+              technical workflows.
+            </p>
+          </article>
+
+          <article class="experience-card reveal">
+            <div class="experience-top">
+              <h3>Cybersecurity Intern — Thiranex</h3>
+              <span class="experience-date">May – June 2026</span>
+            </div>
+            <p>
+              Gained practical exposure to cybersecurity topics and
+              continued developing technical and problem-solving skills.
+            </p>
+          </article>
+
+          <article class="experience-card reveal">
+            <div class="experience-top">
+              <h3>Cybersecurity Internship Programs</h3>
+              <span class="experience-date">Additional Experience</span>
+            </div>
+            <p>
+              Participated in internship programs through InternSpark
+              and Eduskills.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span>My practical work</span>
+          <h2>Featured Projects</h2>
+          <p>Projects that demonstrate my interest in cybersecurity and development.</p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <div class="project-number">PROJECT 01</div>
+            <h3>PhishGuard AI</h3>
+            <p>
+              A phishing website detection project designed to analyze
+              website URLs and identify potentially suspicious websites.
+              It uses a machine learning model with a Flask backend and
+              a user-facing interface.
+            </p>
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">Flask</span>
+              <span class="tag">Machine Learning</span>
+              <span class="tag">Cybersecurity</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-number">PROJECT 02</div>
+            <h3>Python Network Scanner</h3>
+            <p>
+              A network discovery and scanning project built to explore
+              devices on a local network, scan ports, and inspect
+              available service information.
+            </p>
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">Networking</span>
+              <span class="tag">Port Scanning</span>
+              <span class="tag">Network Security</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-number">PROJECT 03</div>
+            <h3>Network Traffic Analysis</h3>
+            <p>
+              A learning project focused on observing and analyzing
+              network traffic to understand communication patterns
+              and identify potentially unusual activity.
+            </p>
+            <div class="tags">
+              <span class="tag">Wireshark</span>
+              <span class="tag">TCP/IP</span>
+              <span class="tag">Traffic Analysis</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-number">PROJECT 04</div>
+            <h3>FortiPath — Attack Path Intelligence</h3>
+            <p>
+              A cybersecurity platform concept that explores attack
+              surface mapping, attack-path visualization, and
+              recommendations for improving security.
+            </p>
+            <div class="tags">
+              <span class="tag">Cybersecurity</span>
+              <span class="tag">AI/ML Concept</span>
+              <span class="tag">Attack Graphs</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section" id="education">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span>Academic background</span>
+          <h2>Education</h2>
+        </div>
+
+        <div class="education-card reveal">
+          <h3>Bachelor of Technology — Cyber Security</h3>
+          <p>Ramachandra College of Engineering</p>
+          <p>Currently pursuing B.Tech</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span>Let's connect</span>
+          <h2>Contact Me</h2>
+          <p>Feel free to reach out for opportunities, collaborations, or professional connections.</p>
+        </div>
+
+        <div class="contact-box reveal">
+          <h3>Have a project or opportunity?</h3>
+          <p>
+            I would be glad to connect and discuss cybersecurity,
+            networking, and technology projects.
+          </p>
+
+          <div class="contact-links">
+            <a class="contact-link"
+               href="mailto:shafheeqmdd@gmail.com">
+              ✉ Email Me
+            </a>
+
+            <a class="contact-link"
+               href="https://www.linkedin.com/"
+               target="_blank"
+               rel="noopener noreferrer">
+              LinkedIn
+            </a>
+
+            <a class="contact-link"
+               href="https://github.com/"
+               target="_blank"
+               rel="noopener noreferrer">
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>
+        © <span id="year"></span>
+        <span>MOHAMMUD ABDUL AZEEZ SHAFHEEQ</span>.
+        All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile navigation
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.textContent = isOpen ? "✕" : "☰";
+    });
+
+    // Close mobile menu after selecting a section
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    // Reveal elements when they enter the screen
+    const revealElements = document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      revealElements.forEach(element => observer.observe(element));
+    } else {
+      revealElements.forEach(element => element.classList.add("visible"));
+    }
+
+    // Highlight the active navigation link
+    const sections = document.querySelectorAll("main section[id]");
+    const navItems = document.querySelectorAll(".nav-links a");
+
+    window.addEventListener("scroll", () => {
+      let currentSection = "home";
+
+      sections.forEach(section => {
+        if (window.scrollY >= section.offsetTop - 150) {
+          currentSection = section.id;
+        }
+      });
+
+      navItems.forEach(link => {
+        link.classList.toggle(
+          "active",
+          link.getAttribute("href") === "#" + currentSection
+        );
+      });
+    });
+
+    // Automatically update the footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
